@@ -5,5 +5,24 @@
 # Ignore files within python subfolders
 /python/**/__pycache__/
 
+# Ignore C++ build files
+/cpp/*/*.out
+/cpp/*/*.o
+/cpp/*/*.exe
+/cpp/*/*.so
+/cpp/*/*.dll
+
+# Ignore Go build and binary files
+/go/*/*.exe
+/go/*/*.exe~
+/go/*/*.dll
+/go/*/*.so
+/go/*/*.o
+/go/*/*.a
+
+# Ignore Rust build files
+/rust/*/target/
+/rust/*/Cargo.lock
+
 # Ignore Visual Studio Code files
 .vscode
