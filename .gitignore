@@ -1,9 +1,9 @@
-# Ignore files within dotnet subfolders
+# Ignore files within csharp subfolders
 /csharp/**/bin/
 /csharp/**/obj/
 
 # Ignore files within python subfolders
 /python/**/__pycache__/
 
-# Ignore Visual Studio files
+# Ignore Visual Studio Code files
 .vscode
