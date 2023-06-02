@@ -12,6 +12,13 @@
 /cpp/*/*.so
 /cpp/*/*.dll
 
+# Ignore C build files
+/c/*/*.out
+/c/*/*.o
+/c/*/*.exe
+/c/*/*.so
+/c/*/*.dll
+
 # Ignore Go build and binary files
 /go/*/*.exe
 /go/*/*.exe~
