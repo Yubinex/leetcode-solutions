@@ -11,6 +11,9 @@ public class Program
         Solution sol = new Solution();
         Console.WriteLine($"Expected: True -> Actual {sol.IsAnagram("anagram", "nagaram")}");
         Console.WriteLine($"Expected: False -> Actual {sol.IsAnagram("rat", "car")}");
+        SolutionAnother sol2 = new SolutionAnother();
+        Console.WriteLine($"Expected: True -> Actual {sol2.IsAnagram("anagram", "nagaram")}");
+        Console.WriteLine($"Expected: False -> Actual {sol2.IsAnagram("rat", "car")}");
     }
 }
 
@@ -46,5 +49,17 @@ public class Solution
 
         return frequenciesS.Count == frequenciesT.Count && frequenciesS.All(
             kv => frequenciesT.ContainsKey(kv.Key) && frequenciesT[kv.Key] == kv.Value);
+    }
+}
+
+public class SolutionAnother
+{
+    public bool IsAnagram(string s, string t)
+    {
+        char[] charArrayS = s.ToCharArray();
+        char[] charArrayT = t.ToCharArray();
+        Array.Sort(charArrayS);
+        Array.Sort(charArrayT);
+        return charArrayS.SequenceEqual(charArrayT);
     }
 }
