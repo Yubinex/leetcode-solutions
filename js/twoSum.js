@@ -4,13 +4,13 @@
  * @return {number[]}
  */
 const twoSum = function (nums, target) {
+  indexMap = {};
   for (let i = 0; i < nums.length; ++i) {
     const tmp = target - nums[i];
-    const remainingNums = nums.slice(i + 1);
-    const index = remainingNums.indexOf(tmp);
-    if (index !== -1) {
-      return [i, index + i + 1];
+    if (tmp in indexMap && indexMap[tmp] !== i) {
+      return [indexMap[tmp], i];
     }
+    indexMap[nums[i]] = i;
   }
   return undefined;
 };
